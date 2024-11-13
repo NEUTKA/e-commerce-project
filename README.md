@@ -69,3 +69,76 @@
 - `matplotlib.pyplot`
 - `seaborn`
 - `operator.attrgetter`
+
+
+# E-commerce Project
+
+Hello everyone!
+This project involves data analysis for e-commerce.
+
+The project is implemented in Python using Jupyter Notebook.
+
+## Project Objectives
+
+The following tasks need to be accomplished in the project:
+
+1. Determine the number of users who made a purchase only once.
+2. Find the average number of undelivered orders per month, categorized by the reasons for non-delivery.
+3. For each product, identify the day of the week it is most frequently purchased.
+4. Calculate the average number of purchases per week for each user (by month).
+5. Conduct a cohort analysis of users using `pandas`. Identify the cohort with the highest retention rate by the 3rd month from January to December.
+
+## Data Description
+
+**`olist_customers_dataset.csv`** — table with unique customer identifiers:
+
+- `customer_id` — user identifier for each order
+- `customer_unique_id` — unique user identifier
+- `customer_zip_code_prefix` — user’s zip code
+- `customer_city` — user’s delivery city
+- `customer_state` — user’s delivery state
+
+**`olist_orders_dataset.csv`** — table of orders:
+
+- `order_id` — unique order identifier (receipt number)
+- `customer_id` — user identifier for each order
+- `order_status` — order status
+  - `created` — created
+  - `approved` — approved
+  - `invoiced` — invoiced
+  - `processing` — in process
+  - `shipped` — shipped
+  - `delivered` — delivered to the customer
+  - `unavailable` — unavailable
+  - `canceled` — canceled
+- `order_purchase_timestamp` — order creation timestamp
+- `order_approved_at` — order payment approval timestamp
+- `order_delivered_carrier_date` — order handover to logistics
+- `order_delivered_customer_date` — order delivery timestamp
+- `order_estimated_delivery_date` — estimated delivery date
+
+**`olist_order_items_dataset.csv`** — items within orders:
+
+- `order_id` — unique order identifier (receipt number)
+- `order_item_id` — identifier of the item within an order (does not contain quantity information)
+- `product_id` — unique product identifier (similar to a barcode)
+- `seller_id` — unique identifier of the product seller
+- `shipping_limit_date` — latest date for the seller to hand over the order to a logistics partner
+- `price` — price per item
+- `freight_value` — weight of the item
+
+## Project Implementation
+
+- Preliminary analysis and data preprocessing were conducted.
+- User behavior and order delivery performance were analyzed.
+- Cohort analysis of users was performed.
+
+## Libraries Used
+
+- `pandas`
+- `numpy`
+- `calendar`
+- `datetime`
+- `matplotlib.pyplot`
+- `seaborn`
+- `operator.attrgetter`
